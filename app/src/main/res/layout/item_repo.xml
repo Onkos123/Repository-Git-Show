@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_owner"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars">
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_repo_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_owner"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nome do repositorio">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_repo_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            app:layout_constraintEnd_toEndOf="@id/tv_repo_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_repo_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_repo_name"
+            tools:text="Descrição do repositorio">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipIcon="@drawable/ic_baseline_star_rate_24"
+            app:chipIconTint="#F7F7FF02"
+            app:chipBackgroundColor="#3C3C3C"
+            android:text="Star Count"
+            app:layout_constraintStart_toStartOf="@id/tv_repo_description"
+            app:layout_constraintTop_toBottomOf="@id/tv_repo_description"
+            >
+
+        </com.google.android.material.chip.Chip>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_repo_language"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintEnd_toEndOf="@+id/tv_repo_name"
+            app:layout_constraintTop_toTopOf="@id/chip_star"
+            tools:text="Java">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
